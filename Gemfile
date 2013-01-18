@@ -22,6 +22,9 @@ gem 'redcarpet'
 gem 'friendly_id'
 gem 'kaminari'
 
+gem 'foreman'
+
 group :production do
 	gem 'pg'
+  gem 'thin'
 end
