@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Blog</title>
+  <%= stylesheet_link_tag "application" %>
+  <link href='http://fonts.googleapis.com/css?family=Cabin|Lobster|Quattrocento+Sans' rel='stylesheet' type='text/css'>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tag %>
+  <%= javascript_tag("var AUTH_TOKEN = #{form_authenticity_token.inspect};") if protect_against_forgery? %>
+
+</head>
+<body>
+
+<div id="container">
+
+<header>
+	<h1>AdminZone!</h1>
+	<p>Way, way better than friendzone...</p>
+</header>
+
+<div id="content">
+	<% if flash[:notice] || flash[:alert] %>
+	<div id="flash">
+		<% if flash[:notice] %>
+			<div id="notice"><%= flash[:notice] %></div>
+		<% end %>
+		<% if flash[:alert] %>
+			<div id="alert"><%= flash[:alert] %></div>
+		<% end %>
+	</div>
+	<% end %>
+
+	<%= yield %>
+	
+</div>
+
+<footer>
+	<p class="copyright">&copy; Somebody-er-other (We think)</p>
+	<p class="links"><a href="#">Privacy Policy</a></p>
+</footer>
+
+</div>
+
+</body>
+</html>

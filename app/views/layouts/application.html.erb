@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blog</title>
+    <%= stylesheet_link_tag "application" %>
+    <link href='http://fonts.googleapis.com/css?family=Cabin|Lobster|Quattrocento+Sans' rel='stylesheet' type='text/css'>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tag %>
+    <%= javascript_tag("var AUTH_TOKEN = #{form_authenticity_token.inspect};") if protect_against_forgery? %>
+
+  </head>
+  <body>
+
+  <div id="container">
+
+  <header>
+  	<h1>Unicorns!!!!~`!1</h1>
+
+  	<nav>
+  		<%= link_to "Home", root_path %>
+  		<%= link_to "About", about_path %>
+  	</nav>
+  </header>
+
+  <div id="content">
+  	<%= yield %>
+  </div>
+
+  <footer>
+  	<p class="copyright">&copy; Somebody-er-other (We think)</p>
+  	<p class="links"><a href="#">Privacy Policy</a></p>
+  </footer>
+
+  </div>
+
+  </body>
+</html>

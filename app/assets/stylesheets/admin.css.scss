@@ -1,0 +1,14 @@
+article.post #admin-links {
+	list-style-type: none;
+}
+
+article.post #admin-links li {
+	display: inline;
+}
+
+#edit-post, #delete-post {
+	:hover, :active {
+		color: #c30f0f;
+	}
+	color: #313131;
+}

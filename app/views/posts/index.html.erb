@@ -1,0 +1,6 @@
+<%= render :partial => "post", :collection => @posts %>
+
+<%= paginate @posts, :window => 2 %>
+
+<%= link_to 'New Post', new_post_path %>
+<hr />

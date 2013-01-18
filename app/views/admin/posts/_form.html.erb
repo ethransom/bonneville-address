@@ -1,0 +1,11 @@
+<%= purdy_form_for [:admin, @post] do |f| %>
+  <%= f.error %>
+
+  <%= f.text_field(:name, "Name") %>
+  <%= f.text_field(:title, "Title") %>
+  <%= f.text_area(:content, "Content") %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

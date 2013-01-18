@@ -1,0 +1,9 @@
+<% cache("post-small-#{post.slug}") do %>
+<div class="post-small">
+	<div><h2><%= link_to post.title, post %></h2></div>
+	<section class="post">
+		<%= render_markdown post.blurb %>
+		<p><%= link_to "Read more...", post, :id => "more" %></p>
+	</section>
+</div>
+<% end %>

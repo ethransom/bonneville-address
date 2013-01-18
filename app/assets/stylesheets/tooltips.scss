@@ -1,0 +1,43 @@
+$tooltip-bg: $red;
+
+
+.field-error {
+	display: inline-block;
+	position: relative;
+	text-decoration: none;
+	background-color: $tooltip-bg;
+	/*background: rgba(0,0,0,.8);*/
+	border-radius: 3px;
+	color: white;
+	padding: 8px 15px;
+	white-space: nowrap;
+	z-index: 98;
+	height: 20px;
+	margin-left: 5px;
+}
+/* The actual arrow */
+.field-error:before{
+	border: solid;
+	border-color: $tooltip-bg transparent;
+	border-width: 6px 6px 0 6px;
+	bottom: 15px;
+	content: "";
+	display: block;
+	left: -8px;
+	position: absolute;
+	z-index: 99;
+	-o-transform:rotate(90deg);
+	-moz-transform:rotate(90deg);
+	-khtml-transform:rotate(90deg);
+	-webkit-transform:rotate(90deg);
+}
+
+.form_error {
+	display: inline-block;
+	background-color: $tooltip-bg;
+	border-radius: 3px;
+	color: white;
+	padding: 8px 15px;
+	height: 20px;
+	margin-bottom: 10px;
+}

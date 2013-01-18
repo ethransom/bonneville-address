@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+ethan:
+  username: Ethan
+  password: secret
+  email: ethan_ransom5@msn.com
+
+fred:
+  username: Fred
+  password: isDaBest
+  email: fred@fred.org

@@ -1,0 +1,13 @@
+﻿<% cache("post-#{params[:id]}") do %>
+<article class="post">
+	<h1 class="post"><%= @post.title %></h1>
+
+	<div id="post">
+	<%= render_markdown @post.content %>
+	<p class="info">Posted by <span class="name"><%= @post.name %></span></p>
+
+	</div>
+
+	<%= link_to "Back to Posts", posts_path %>
+</article>
+<% end %>

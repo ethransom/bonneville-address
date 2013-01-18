@@ -1,0 +1,277 @@
+/*
+*= require_self
+*= require token-input
+*= require buttons
+*/
+
+/* Basic definitons */
+$red: #c30f0f;
+$dark-grey: #313131;
+$header-grey: #a5a5a5;
+$bg-grey: #f6f6f6;
+$light-grey: #c3c3c3;
+$dark-green: #407b31;
+
+$content-width: 900px;
+
+/* Basic imports */
+@import "forms", "tooltips", "cute_box";
+
+/* LAYOUT */
+body {
+	margin: 0px;
+	padding: 0px;
+	/*background-image: url( image-path('rough.jpg') );*/
+	background-color: $bg-grey;
+	font-family: 'Quattrocento Sans', "ProximaNova", "Helvetica Neue", helvetica, arial, sans-serif; 
+}
+
+div#container {
+	width: $content-width;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+	padding: 0;
+}
+header {
+	width: 100%;
+	height: 90px;
+	padding: 0;
+	margin: 0;
+}
+header h1 {
+	/*font-family: "Arial Narrow",Tahoma, Geneva, Verdana, sans-serif;*/
+	font-family: 'Lobster', cursive;
+	font-size: 45px;
+	text-transform: small-caps;
+	letter-spacing: -1px;
+	color: $header-grey;
+	float: left;
+}
+
+header h1:before {
+	content: "";
+	margin-left: 10px;
+	background-image: url( image-path('unicorn-black.png') );
+	width: 22px;
+	height: 30px;
+	display: block;
+	float: left;
+	margin: 14px 15px 0 5px;
+}
+header nav {
+	padding: 60px 30px 0 50px;
+	float: left;
+}
+header nav a {
+	padding-left: 20px;
+	font-weight: bold;
+	color: $dark-grey;
+	text-decoration: none;
+	font-family: 'Cabin', sans-serif;
+}
+header nav a:hover {
+	text-decoration: underline;
+}
+header nav a:active {
+	color: $red;
+}
+#user {
+	width: 300px;
+	margin-top: 45px;
+	float: right;
+/*	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;*/
+	background-color: $header-grey;
+	height: 60px;
+}
+div#content {
+	margin: 0;
+	width: 860px;
+	text-align: left;
+	padding: 20px;
+
+	/* display: inline-block; */
+}
+#main {
+	float: left;
+	width: 540px;
+	padding: 30px;
+}
+#side {
+	float: right;
+	width: 280px;
+	padding: 10px;
+}
+
+#flash {
+	padding: 0 auto 0 auto;
+	text-align: center;
+	height: 37px;
+	margin-bottom: 10px;
+}
+#notice, #alert {
+	display: inline-block;
+	border: 1px solid;
+	border-radius: 3px;
+	color: white;
+	padding: 8px 15px;
+	text-align: center;
+}
+#notice {
+	background-color: $dark-green;
+	border-color: $dark-green;
+}
+#alert {
+	background-color: $red;
+	border-color: $red;
+}
+
+#comments {
+	border: 1px dotted $dark-grey;
+	background-color: #eaeaea;
+	padding: 20px 10px 20px 10px;
+}
+/* CONTENT */
+#content h1 {
+	/*font-family: Trebuchet, sans-serif;*/
+	font-family: 'Cabin', 'Trebuchet', sans-serif;
+	color: $dark-grey;
+}
+#content h1.post {
+	color: $red;
+	font-family: 'Cabin', 'Trebuchet', sans-serif;
+	font-size: 2.4em;
+	border-bottom: 1px dotted $red;
+}
+#content h1.post a  {
+	font-size: .5em;
+	display: block;
+	float: right;
+	color: $red;
+}
+div#post, section.post {
+	line-height: 1.35em;
+	/*text-align: justify;*/
+
+	p {
+		margin-top: 20px;
+	}
+}
+
+.post-small {
+	padding: 30px;
+	border-top: 1px dotted $light-grey;
+
+	div {
+		border-bottom: 1px dotted $red;
+
+		span {
+			float: right;
+			color: $red;
+			font-family: 'Cabin', sans-serif;
+			font-weight: bold;
+			text-decoration: underline;
+		}
+
+		h2 {
+			display: inline;
+			margin: 10px;
+
+			a {
+				color: $red;
+				font-family: 'Cabin';
+				font-size: 2em;
+				text-decoration: none;
+			}
+		}
+	}
+
+	section {
+		margin: 15px;
+
+		h1, h2, h3 {
+			font-family: 'Cabin', sans-serif;
+			border-bottom: 1px dotted $dark-grey;
+			padding-bottom: 3px;
+
+			&:before {
+				width: 8px;
+				height: 18px;
+				background-image: url( image-path('ribbon.png') );
+				display: block;
+				content: '';
+				float: left;
+				margin-right: 5px;
+			}
+		}
+	}
+	#more {
+		/*NOTE*/
+	}
+}
+
+#login { 
+	width: 500px;
+	padding: 10px;
+	margin: 0 auto 0 auto;
+/* 	border: 3px solid $light-grey;
+ */}
+#login ul {
+	list-style-type: none;
+	font-family: Arial;
+}
+
+ #login button {
+	float: right;
+	/*color: $dark-grey;
+	border: 3px solid $dark-grey;
+	background-color: $light-grey;*/
+} 
+#token-input-post_tag_tokens {
+	border: 0;
+	margin: 0;
+	padding: 0;
+	box-shadow: 0;
+}
+
+.pagination {
+	text-align: center;
+	span {
+		background-color: $dark-grey;
+		@include box;
+
+		a {
+			color: white;
+			text-decoration: none;
+		}
+	}
+
+	.current {
+		background-color: $dark-green;
+	}
+
+	margin-bottom: 20px;
+}
+
+blockquote {
+	border-left: 1px dotted $light-grey;
+	padding-left: 10px;
+}
+hr {
+	border: none;
+	border-top: 1px dotted $light-grey;
+}
+
+footer {
+	height: 50px;
+	margin-top: 20px;
+}
+
+footer p.copyright {
+	float: left;
+}
+
+footer p.links {
+	float: right;
+	width: 100px;
+}
