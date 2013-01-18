@@ -51,7 +51,7 @@ Blog::Application.configure do
   config.assets.compress = true
 
   # Don't fallback to assets pipeling if a precompiled asset is missed
-  config.assets.compile = false
+  config.assets.compile = true
 
   # Generate digests for assets URLs
 end
