@@ -6,6 +6,7 @@ gem 'rails', '3.1.4'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 group :development do
 	gem 'sqlite3'
+  gem 'rb-readline'
 end
 
 # Gems used only for assets and not required
