@@ -2,7 +2,7 @@
 
 <table>
   <tr>
-    <th>Name</th>
+    <th>Author</th>
     <th>Title</th>
     <th>Content</th>
     <th></th>
@@ -12,7 +12,7 @@
 
 <% @posts.each do |post| %>
   <tr>
-    <td><%= post.name %></td>
+    <td><%= post.author.name %></td>
     <td><%= post.title %></td>
     <td><%= post.short_preview %></td>
     <td><%= link_to 'Show', admin_post_path(post) %></td>

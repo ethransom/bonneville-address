@@ -4,7 +4,7 @@
 
 	<div id="post">
 	<%= render_markdown @post.content %>
-	<p class="info">Posted by <span class="name"><%= @post.name %></span></p>
+	<p class="info">By: <span class="name"><%= @post.author.name %></span> | <%= @post.author.position %></p>
 
 	</div>
 

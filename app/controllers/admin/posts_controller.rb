@@ -25,6 +25,7 @@ class Admin::PostsController < Admin::AdminController
   # GET /admin/posts/new.json
   def new
     @post = Post.new
+    @authors = Author.all # for the option select
 
     respond_to do |format|
       format.html # new.html.erb
@@ -35,6 +36,7 @@ class Admin::PostsController < Admin::AdminController
   # GET /admin/posts/1/edit
   def edit
     @post = Post.find(params[:id])
+    @authors = Author.all # for the option select
   end
 
   # POST /admin/posts
