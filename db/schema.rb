@@ -11,19 +11,11 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130121222401) do
+ActiveRecord::Schema.define(:version => 20130121231600) do
 
   create_table "authors", :force => true do |t|
     t.string   "name"
     t.string   "position"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "comments", :force => true do |t|
-    t.string   "commenter"
-    t.text     "body"
-    t.integer  "post_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -39,32 +31,15 @@ ActiveRecord::Schema.define(:version => 20130121222401) do
   add_index "friendly_id_slugs", ["sluggable_id"], :name => "index_friendly_id_slugs_on_sluggable_id"
   add_index "friendly_id_slugs", ["sluggable_type"], :name => "index_friendly_id_slugs_on_sluggable_type"
 
-# Could not dump table "posts" because of following StandardError
-#   Unknown type 'reference' for column 'author_id'
-
-  create_table "posts_tags", :id => false, :force => true do |t|
-    t.integer "post_id"
-    t.integer "tag_id"
-  end
-
-  create_table "tags", :force => true do |t|
-    t.string   "name"
+  create_table "posts", :force => true do |t|
+    t.string   "title"
+    t.text     "content"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "slug"
+    t.integer  "author_id"
   end
 
-  add_index "tags", ["slug"], :name => "index_tags_on_slug"
-
-  create_table "users", :force => true do |t|
-    t.string   "username"
-    t.string   "password"
-    t.string   "email"
-    t.integer  "post_id"
-    t.integer  "comment_id"
-    t.string   "admin"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
+  add_index "posts", ["slug"], :name => "index_posts_on_slug"
 
 end
