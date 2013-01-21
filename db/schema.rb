@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130118040424) do
+ActiveRecord::Schema.define(:version => 20130121222401) do
 
   create_table "authors", :force => true do |t|
     t.string   "name"
@@ -39,16 +39,8 @@ ActiveRecord::Schema.define(:version => 20130118040424) do
   add_index "friendly_id_slugs", ["sluggable_id"], :name => "index_friendly_id_slugs_on_sluggable_id"
   add_index "friendly_id_slugs", ["sluggable_type"], :name => "index_friendly_id_slugs_on_sluggable_type"
 
-  create_table "posts", :force => true do |t|
-    t.string   "name"
-    t.string   "title"
-    t.text     "content"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "slug"
-  end
-
-  add_index "posts", ["slug"], :name => "index_posts_on_slug"
+# Could not dump table "posts" because of following StandardError
+#   Unknown type 'reference' for column 'author_id'
 
   create_table "posts_tags", :id => false, :force => true do |t|
     t.integer "post_id"
