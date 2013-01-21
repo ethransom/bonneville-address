@@ -1,10 +1,8 @@
 Blog::Application.routes.draw do
 
-
-  resources :authors
-
   namespace :admin do
     resources :posts
+    resources :authors
   end
 
   match "/about" => "pages#about", :as => :about
