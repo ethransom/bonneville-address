@@ -38,7 +38,7 @@ ActiveRecord::Schema.define(:version => 20130123035657) do
     t.datetime "updated_at"
     t.string   "slug"
     t.integer  "author_id"
-    t.string   "section_id"
+    t.integer  "section_id"
   end
 
   add_index "posts", ["slug"], :name => "index_posts_on_slug"
