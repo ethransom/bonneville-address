@@ -1,0 +1,7 @@
+<section id="<%= section.name %>" class="content">
+  <h2><%= link_to section.name, section %></h2>
+
+  <div class="posts"><%= render section.recent_posts(3) %></div>
+
+  <p class="more"><%= link_to "More #{section.name}...", section %></p>
+</section>
