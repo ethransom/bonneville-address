@@ -15,6 +15,10 @@ Blog::Application.routes.draw do
   match '/authors' => 'authors#index'
   match "/authors/:id" => "authors#show", :as => :author
 
+  # sections
+  match '/sections' => 'sections#index'
+  match '/sections/:id' => 'sections#show', :as => :section
+
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
   root :to => "posts#index"

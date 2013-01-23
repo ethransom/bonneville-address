@@ -12,7 +12,8 @@ $bg-grey: #f6f6f6;
 $light-grey: #c3c3c3;
 $dark-green: #407b31;
 
-$content-width: 900px;
+$container-width: 900px;
+$content-width: 860px;
 
 /* Basic imports */
 @import "forms", "tooltips", "cute_box";
@@ -27,7 +28,7 @@ body {
 }
 
 div#container {
-	width: $content-width;
+	width: $container-width;
 	margin-right: auto;
 	margin-left: auto;
 	text-align: center;
@@ -90,7 +91,7 @@ div#content {
 	text-align: left;
 	padding: 20px;
 
-	/* display: inline-block; */
+	display: inline-block;
 }
 #main {
 	float: left;
@@ -156,6 +157,31 @@ div#post, section.post {
 	p {
 		margin-top: 20px;
 	}
+}
+
+.post-preview {
+	$padding: 10px;
+	$margin: 5px;
+
+	background-color: $header-grey;
+	padding: $padding;
+	border-radius: $padding;
+	width: ($content-width / 3) - ($padding * 2) - ($margin * 2);
+	margin-right: $margin;
+	float: left;
+
+	h3, h3 a {
+		color: $red;
+	}
+}
+
+section.content {
+	p.more {
+		float: right;
+	}
+
+	display: inline-block;
+	border-bottom: 1px solid $dark-grey;
 }
 
 .post-small {
