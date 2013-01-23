@@ -2,6 +2,7 @@ class Post < ActiveRecord::Base
 	validates :title, :presence => true, :length => {:minimum => 5}
 
 	belongs_to :author
+	belongs_to :section
 	
 	extend FriendlyId
 	friendly_id :title, use: :slugged	
