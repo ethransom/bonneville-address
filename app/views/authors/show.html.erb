@@ -1,0 +1,7 @@
+<h1><%= @author.name %> - <%= @author.position %></h1>
+
+<h2>Articles: </h2>
+
+<%= render :partial => "posts/post", :collection => @posts %>
+
+<%= paginate @posts, :window => 2 %>

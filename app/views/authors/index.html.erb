@@ -1,0 +1,3 @@
+<% @authors.each do |author| %>
+  <p><%= link_to author.name, author_path(author) %> | <%= author.position %></p>
+<% end %>
