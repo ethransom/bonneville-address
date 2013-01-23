@@ -180,6 +180,10 @@ section.content {
 		float: right;
 	}
 
+	div.posts {
+		display: inline-block;
+	}
+
 	display: inline-block;
 	border-bottom: 1px solid $dark-grey;
 }
