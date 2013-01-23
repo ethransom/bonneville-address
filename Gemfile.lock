@@ -66,6 +66,7 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.18)
     multi_json (1.2.0)
+    newrelic_rpm (3.5.5.38)
     pg (0.13.2)
     pg (0.13.2-x86-mingw32)
     polyglot (0.3.3)
@@ -135,6 +136,7 @@ DEPENDENCIES
   friendly_id
   jquery-rails
   kaminari
+  newrelic_rpm
   pg
   rails (= 3.1.4)
   rb-readline

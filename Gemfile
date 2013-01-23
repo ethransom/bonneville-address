@@ -28,4 +28,5 @@ gem 'foreman'
 group :production do
 	gem 'pg'
   gem 'thin'
+  gem 'newrelic_rpm'
 end
