@@ -18,6 +18,9 @@ $content-width: 860px;
 /* Basic imports */
 @import "forms", "tooltips", "cute_box";
 
+/* Fonts */
+@import url(http://fonts.googleapis.com/css?family=Quattrocento:400,700);
+
 /* LAYOUT */
 body {
 	margin: 0px;
@@ -33,35 +36,33 @@ div#container {
 	margin-left: auto;
 	text-align: center;
 	padding: 0;
+	background-color: white;
+	border-top: 3px solid $header-grey;
+	margin-top: 10px;
+	box-shadow: 5px 5px 10px $dark-grey;
 }
 header {
-	width: 100%;
+	$margin: 10px;
+	$padding: 15px;
+	$width: $container-width - ($margin * 2) - ($padding *2);
+	width: $width;
 	height: 90px;
-	padding: 0;
-	margin: 0;
+	padding: 0 $padding 25px $padding;
+	margin: 0 $margin 0 $margin;
+	border-bottom: 1px dotted $dark-grey;
 }
 header h1 {
 	/*font-family: "Arial Narrow",Tahoma, Geneva, Verdana, sans-serif;*/
-	font-family: 'Lobster', cursive;
+	font-family: 'Quattrocento', cursive;
 	font-size: 45px;
 	text-transform: small-caps;
 	letter-spacing: -1px;
-	color: $header-grey;
+	color: $dark-grey;
 	float: left;
 }
 
-header h1:before {
-	content: "";
-	margin-left: 10px;
-	background-image: url( image-path('unicorn-black.png') );
-	width: 22px;
-	height: 30px;
-	display: block;
-	float: left;
-	margin: 14px 15px 0 5px;
-}
 header nav {
-	padding: 60px 30px 0 50px;
+	padding: 45px 30px 0 50px;
 	float: left;
 }
 header nav a {
@@ -77,6 +78,12 @@ header nav a:hover {
 header nav a:active {
 	color: $red;
 }
+
+header p.slogan {
+	float: left;
+	clear: both;
+}
+
 #user {
 	width: 300px;
 	margin-top: 45px;
@@ -163,12 +170,12 @@ div#post, section.post {
 	$padding: 10px;
 	$margin: 5px;
 
-	background-color: $header-grey;
+	background-color: white;
 	padding: $padding;
-	border-radius: $padding;
 	width: ($content-width / 3) - ($padding * 2) - ($margin * 2);
 	margin-right: $margin;
 	float: left;
+	font-family: serif;
 
 	h3, h3 a {
 		color: $red;
@@ -176,6 +183,12 @@ div#post, section.post {
 }
 
 section.content {
+	h2 a {
+		color: $dark-grey;
+		font-family: "Quattrocento", serif;
+		text-decoration: none;
+		font-size: 140%;
+	}
 	p.more {
 		float: right;
 	}
@@ -185,7 +198,7 @@ section.content {
 	}
 
 	display: inline-block;
-	border-bottom: 1px solid $dark-grey;
+	border-bottom: 1px dotted $dark-grey;
 }
 
 .post-small {
