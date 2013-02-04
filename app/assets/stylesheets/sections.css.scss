@@ -1,3 +1,22 @@
-// Place all the styles related to the sections controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+// Stuff related to section displays.
+
+// Any section header
+h2 a, h1.section-heading {
+  color: $dark-grey;
+  font-family: "Quattrocento", serif;
+  text-decoration: none;
+  font-size: 40px;
+}
+
+section.content {
+  p.more {
+    float: right;
+  }
+
+  div.posts {
+    display: inline-block;
+  }
+
+  display: inline-block;
+  border-bottom: 1px dotted $dark-grey;
+}

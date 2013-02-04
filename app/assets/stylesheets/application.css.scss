@@ -18,6 +18,9 @@ $content-width: 860px;
 /* Basic imports */
 @import "forms", "tooltips", "cute_box";
 
+/* module imports */
+@import "posts", "sections";
+
 /* Fonts */
 @import url(http://fonts.googleapis.com/css?family=Quattrocento:400,700);
 
@@ -25,7 +28,7 @@ $content-width: 860px;
 body {
 	margin: 0px;
 	padding: 0px;
-	/*background-image: url( image-path('rough.jpg') );*/
+	background-image: url( image-path('satinweave-texture.png') );
 	background-color: $bg-grey;
 	font-family: 'Quattrocento Sans', "ProximaNova", "Helvetica Neue", helvetica, arial, sans-serif; 
 }
@@ -45,33 +48,66 @@ header {
 	$margin: 10px;
 	$padding: 15px;
 	$width: $container-width - ($margin * 2) - ($padding *2);
+
 	width: $width;
-	height: 90px;
-	padding: 0 $padding 25px $padding;
+	padding: 0 $padding 0 $padding;
 	margin: 0 $margin 0 $margin;
-	border-bottom: 1px dotted $dark-grey;
 }
 header h1 {
 	/*font-family: "Arial Narrow",Tahoma, Geneva, Verdana, sans-serif;*/
 	font-family: 'Quattrocento', cursive;
-	font-size: 45px;
+	font-size: 70px;
 	text-transform: small-caps;
 	letter-spacing: -1px;
+	text-align: left;
+	text-indent: 30px;
+	border-top: 1px dotted $dark-grey;
+	padding: 10px 0;
+	margin: 20px 0;
 	color: $dark-grey;
-	float: left;
+
+	$logo-height: 100px;
+	height: $logo-height;
+	line-height: $logo-height;
+
+	&:before {
+		content: " ";
+		background: url(image-path('gecko-small.png')) transparent no-repeat;
+		width: 158px;
+		height: $logo-height;
+		display: block;
+		float: left;
+	}
+}
+header p.slogan {
+	text-align: left;
+	text-indent: 100px;
+	margin-top: -40px;
 }
 
 header nav {
-	padding: 45px 30px 0 50px;
-	float: left;
+	border-bottom: 1px dotted $dark-grey;
+	display: inline-block;
+	width: 100%;
+	text-align: left;
+	height: 30px;
+	border: 1px dotted $dark-grey;
+	border-width: 1px 0 1px 0; // only top and bottom borders
+	padding-top: 10px;
+	
+	a {
+		padding-left: 20px;
+		font-weight: bold;
+		font-size: 115%;
+		background-color: $header-grey;
+		color: white;
+		text-decoration: none;
+		font-family: 'Quattrocento', serif;
+		padding: 5px 20px;
+		font-variant: small-caps;
+	}
 }
-header nav a {
-	padding-left: 20px;
-	font-weight: bold;
-	color: $dark-grey;
-	text-decoration: none;
-	font-family: 'Cabin', sans-serif;
-}
+
 header nav a:hover {
 	text-decoration: underline;
 }
@@ -79,10 +115,6 @@ header nav a:active {
 	color: $red;
 }
 
-header p.slogan {
-	float: left;
-	clear: both;
-}
 
 #user {
 	width: 300px;
@@ -96,7 +128,7 @@ div#content {
 	margin: 0;
 	width: 860px;
 	text-align: left;
-	padding: 20px;
+	padding: 0 20px;
 
 	display: inline-block;
 }
@@ -138,119 +170,6 @@ div#content {
 	border: 1px dotted $dark-grey;
 	background-color: #eaeaea;
 	padding: 20px 10px 20px 10px;
-}
-/* CONTENT */
-#content h1 {
-	/*font-family: Trebuchet, sans-serif;*/
-	font-family: 'Cabin', 'Trebuchet', sans-serif;
-	color: $dark-grey;
-}
-#content h1.post {
-	color: $red;
-	font-family: 'Cabin', 'Trebuchet', sans-serif;
-	font-size: 2.4em;
-	border-bottom: 1px dotted $red;
-}
-#content h1.post a  {
-	font-size: .5em;
-	display: block;
-	float: right;
-	color: $red;
-}
-div#post, section.post {
-	line-height: 1.35em;
-	/*text-align: justify;*/
-
-	p {
-		margin-top: 20px;
-	}
-}
-
-.post-preview {
-	$padding: 10px;
-	$margin: 5px;
-
-	background-color: white;
-	padding: $padding;
-	width: ($content-width / 3) - ($padding * 2) - ($margin * 2);
-	margin-right: $margin;
-	float: left;
-	font-family: serif;
-
-	h3, h3 a {
-		color: $red;
-	}
-}
-
-section.content {
-	h2 a {
-		color: $dark-grey;
-		font-family: "Quattrocento", serif;
-		text-decoration: none;
-		font-size: 140%;
-	}
-	p.more {
-		float: right;
-	}
-
-	div.posts {
-		display: inline-block;
-	}
-
-	display: inline-block;
-	border-bottom: 1px dotted $dark-grey;
-}
-
-.post-small {
-	padding: 30px;
-	border-top: 1px dotted $light-grey;
-
-	div {
-		border-bottom: 1px dotted $red;
-
-		span {
-			float: right;
-			color: $red;
-			font-family: 'Cabin', sans-serif;
-			font-weight: bold;
-			text-decoration: underline;
-		}
-
-		h2 {
-			display: inline;
-			margin: 10px;
-
-			a {
-				color: $red;
-				font-family: 'Cabin';
-				font-size: 2em;
-				text-decoration: none;
-			}
-		}
-	}
-
-	section {
-		margin: 15px;
-
-		h1, h2, h3 {
-			font-family: 'Cabin', sans-serif;
-			border-bottom: 1px dotted $dark-grey;
-			padding-bottom: 3px;
-
-			&:before {
-				width: 8px;
-				height: 18px;
-				background-image: url( image-path('ribbon.png') );
-				display: block;
-				content: '';
-				float: left;
-				margin-right: 5px;
-			}
-		}
-	}
-	#more {
-		/*NOTE*/
-	}
 }
 
 #login { 
@@ -308,13 +227,4 @@ hr {
 footer {
 	height: 50px;
 	margin-top: 20px;
-}
-
-footer p.copyright {
-	float: left;
-}
-
-footer p.links {
-	float: right;
-	width: 100px;
 }

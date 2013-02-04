@@ -1,0 +1,84 @@
+// All post related css
+// Includes rules for post previews and all other
+// places posts show up.
+
+.post-preview {
+  $padding: 10px;
+  $margin: 5px;
+
+  background-color: white;
+  padding: $padding;
+  width: ($content-width / 3) - ($padding * 2) - ($margin * 2);
+  margin-right: $margin;
+  float: left;
+  font-family: serif;
+
+  h3, h3 a {
+    color: $red;
+  }
+}
+
+.post h1 {
+  color: $dark-grey;
+  font-family: 'Quattrocento', serif;
+  font-size: 2.4em;
+  border-bottom: 1px dotted $dark-grey;
+
+  a {
+    font-size: .5em;
+    display: block;
+    float: right;
+  }
+}
+
+.post-small {
+  padding: 30px;
+  border-top: 1px dotted $light-grey;
+
+  div {
+    border-bottom: 1px dotted $red;
+
+    span {
+      float: right;
+      color: $red;
+      font-family: 'Cabin', sans-serif;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+
+    h2 {
+      display: inline;
+      margin: 10px;
+
+      a {
+        color: $red;
+        font-family: 'Cabin';
+        font-size: 2em;
+        text-decoration: none;
+      }
+    }
+  }
+
+  section {
+    margin: 15px;
+
+    h1, h2, h3 {
+      font-family: 'Cabin', sans-serif;
+      border-bottom: 1px dotted $dark-grey;
+      padding-bottom: 3px;
+
+      &:before {
+        width: 8px;
+        height: 18px;
+        background-image: url( image-path('ribbon.png') );
+        display: block;
+        content: '';
+        float: left;
+        margin-right: 5px;
+      }
+    }
+  }
+  #more {
+    /*NOTE*/
+  }
+}

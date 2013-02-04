@@ -1,6 +1,6 @@
 ﻿<% cache("post-#{params[:id]}") do %>
 <article class="post">
-	<h1 class="post"><%= @post.title %></h1>
+	<h1><%= @post.title %></h1>
 
 	<div id="post">
 	<%= render_markdown @post.content %>
