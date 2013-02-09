@@ -1,5 +1,6 @@
 <div class="post post-preview">
   <h3><%= link_to post.title, post %></h3>
+  <p class="info">By <em><%= link_to post.author.name, post.author %></em></p>
 
   <p class="blurb"><%= render_markdown post.blurb %></p>
 

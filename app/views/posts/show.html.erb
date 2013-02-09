@@ -1,10 +1,14 @@
 ﻿<% cache("post-#{params[:id]}") do %>
 <article class="post">
 	<h1><%= @post.title %></h1>
+    <p class="info">
+      By <em><%= link_to @post.author.name, @post.author %></em>, <%= @post.author.position %><br />
+      <%= @post.publish_date %>
+    </p>
+    
 
 	<div id="post">
-	<%= render_markdown @post.content %>
-	<p class="info">By: <span class="name"><%= @post.author.name %></span> | <%= @post.author.position %></p>
+	<%= @post.content_html %>
 
 	</div>
 

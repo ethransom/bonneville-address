@@ -14,11 +14,13 @@ class Post < ActiveRecord::Base
 	def short_preview
 		self.content.truncate(50, :separator => ' ')
 	end
+
+	def publish_date
+		created_at.strftime("%A, %B #{created_at.day.ordinalize}")
+	end
 	
-	private 
-	
-	# TODO: FIIIIIIIX!
-	def to_markdown
-		
+	def content_html
+		markdown = Redcarpet::Markdown.new Redcarpet::Render::XHTML, :autolink => true, :no_intra_emphasis => true
+		markdown.render(content).html_safe
 	end
 end

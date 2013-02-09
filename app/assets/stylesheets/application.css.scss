@@ -25,6 +25,11 @@ $content-width: 860px;
 @import url(http://fonts.googleapis.com/css?family=Quattrocento:400,700);
 
 /* LAYOUT */
+html {
+	padding: 0;
+	margin: 0;
+}
+
 body {
 	margin: 0px;
 	padding: 0px;
@@ -35,14 +40,11 @@ body {
 
 div#container {
 	width: $container-width;
-	margin-right: auto;
-	margin-left: auto;
 	text-align: center;
-	padding: 0;
+	padding: 20px 0 0 0;
+	margin: 0 auto 0 auto;
+	margin-top: -20px;
 	background-color: white;
-	border-top: 3px solid $header-grey;
-	margin-top: 10px;
-	box-shadow: 5px 5px 10px $dark-grey;
 }
 header {
 	$margin: 10px;
@@ -111,10 +113,6 @@ header nav {
 header nav a:hover {
 	text-decoration: underline;
 }
-header nav a:active {
-	color: $red;
-}
-
 
 #user {
 	width: 300px;

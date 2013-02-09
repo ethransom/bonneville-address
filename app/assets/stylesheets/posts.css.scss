@@ -8,26 +8,51 @@
 
   background-color: white;
   padding: $padding;
-  width: ($content-width / 3) - ($padding * 2) - ($margin * 2);
+  $width: ($content-width / 3) - ($padding * 2) - ($margin * 2);
+  width: $width;
   margin-right: $margin;
   float: left;
   font-family: serif;
 
   h3, h3 a {
-    color: $red;
+    color: $dark-grey;
+    font-size: 125%;
+    margin-bottom: 0;
+  }
+
+  // author and publish date
+  p.info {
+    margin: 0;
+    font-size: 80%;
+  }
+
+  // preview images need to be smaller
+  img {
+    max-width: $width;
   }
 }
 
-.post h1 {
-  color: $dark-grey;
-  font-family: 'Quattrocento', serif;
-  font-size: 2.4em;
-  border-bottom: 1px dotted $dark-grey;
+article.post {
+  h1 {
+    color: $dark-grey;
+    font-family: 'Quattrocento', serif;
+    font-size: 2.4em;
+    border-bottom: 1px dotted $dark-grey;
 
-  a {
-    font-size: .5em;
+    a {
+      font-size: .5em;
+      display: block;
+      float: right;
+    }
+  }
+
+  img {
+    margin-right: auto;
+    margin-left: auto;
     display: block;
-    float: right;
+
+    // stay within content area
+    max-width: 100%;
   }
 }
 
