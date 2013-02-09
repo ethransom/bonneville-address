@@ -1,3 +1,7 @@
+<% content_for :title do %>
+  <%= @author.name %>, <%= @author.position %>
+<% end %>
+
 <h2><%= @author.name %> - <%= @author.position %></h2>
 
 <p><%= @author.name %>'s articles:</p>

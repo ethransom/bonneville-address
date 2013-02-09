@@ -20,4 +20,14 @@ module ApplicationHelper
 	 
 		form_for(name, *(args << options.merge(:builder => PurdyFormBuilder)), &block )
 	end
+
+	def page_title
+		name = "The Wasatch Gecko"
+		if content_for? :title
+			name << " | "
+			name << content_for(:title)
+		end
+
+		name
+	end
 end

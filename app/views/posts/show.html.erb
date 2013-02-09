@@ -1,4 +1,8 @@
-﻿<article class="post">
+﻿<% content_for :title do %>
+  <%= @post.title %>
+<% end %>
+
+<article class="post">
 	<h1><%= @post.title %></h1>
 
   <div class="info">
@@ -9,7 +13,28 @@
   <div class="social">
     <div class="fb-like" data-href="<%= post_url @post %>" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false"></div>
 
+    <% content_for :extra_scripts do %>
+      <div id="fb-root"></div>
+      <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));</script>
+    <% end %>
+
     <div class="g-plusone" data-size="medium"></div>
+
+    <% content_for :extra_scripts do %>
+      <script type="text/javascript">
+        (function() {
+          var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+          po.src = 'https://apis.google.com/js/plusone.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+        })();
+      </script>
+    <% end %>
   </div>
 
 	<div id="post">
