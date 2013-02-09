@@ -1,17 +1,23 @@
-﻿<% cache("post-#{params[:id]}") do %>
-<article class="post">
+﻿<article class="post">
 	<h1><%= @post.title %></h1>
-    <p class="info">
-      By <em><%= link_to @post.author.name, @post.author %></em>, <%= @post.author.position %><br />
-      <%= @post.publish_date %>
-    </p>
-    
+
+  <div class="info">
+    <p>By <em><%= link_to @post.author.name, @post.author %></em>, <%= @post.author.position %></p>
+    <p class="date"><%= @post.publish_date %></p>
+  </div>
+  
+  <div class="social">
+    <div class="fb-like" data-href="<%= post_url @post %>" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false"></div>
+
+    <div class="g-plusone" data-size="medium"></div>
+  </div>
 
 	<div id="post">
-	<%= @post.content_html %>
+    <%= @post.content_html %>
 
+    <% # comments, provided through FB %>
+    <div class="comments">
+      <div class="fb-comments" data-href="<%= post_url @post %>" data-width="860" data-num-posts="20"></div>
+    </div>
 	</div>
-
-	<%= link_to "Back to Posts", posts_path %>
 </article>
-<% end %>

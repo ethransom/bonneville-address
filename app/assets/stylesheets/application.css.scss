@@ -56,17 +56,9 @@ header {
 	margin: 0 $margin 0 $margin;
 }
 header h1 {
-	/*font-family: "Arial Narrow",Tahoma, Geneva, Verdana, sans-serif;*/
-	font-family: 'Quattrocento', cursive;
-	font-size: 70px;
-	text-transform: small-caps;
-	letter-spacing: -1px;
-	text-align: left;
-	text-indent: 30px;
 	border-top: 1px dotted $dark-grey;
 	padding: 10px 0;
 	margin: 20px 0;
-	color: $dark-grey;
 
 	$logo-height: 100px;
 	height: $logo-height;
@@ -80,6 +72,16 @@ header h1 {
 		display: block;
 		float: left;
 	}
+}
+header h1 a {
+	font-family: 'Quattrocento', cursive;
+	font-size: 70px;
+	text-transform: small-caps;
+	letter-spacing: -1px;
+	text-align: left;
+	text-indent: 30px;
+	color: $dark-grey;
+	text-decoration: none;
 }
 header p.slogan {
 	text-align: left;

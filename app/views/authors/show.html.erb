@@ -1,6 +1,6 @@
-<h1><%= @author.name %> - <%= @author.position %></h1>
+<h2><%= @author.name %> - <%= @author.position %></h2>
 
-<h2>Articles: </h2>
+<p><%= @author.name %>'s articles:</p>
 
 <%= render :partial => "posts/post", :collection => @posts %>
 

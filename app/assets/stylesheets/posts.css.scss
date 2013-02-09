@@ -38,6 +38,7 @@ article.post {
     font-family: 'Quattrocento', serif;
     font-size: 2.4em;
     border-bottom: 1px dotted $dark-grey;
+    margin-bottom: 0;
 
     a {
       font-size: .5em;
@@ -53,6 +54,33 @@ article.post {
 
     // stay within content area
     max-width: 100%;
+  }
+
+  .info {
+    margin-top: 5px;
+
+    p.date {
+      float: right;
+    }
+
+    p {
+      display: inline-block;
+    }
+  }
+
+  .social {
+    margin-bottom: 30px;
+
+    // fix annoying fb-button-lower-than-g-plus-button bug
+    .fb-like {
+      position:relative;
+      top: -3px;
+    }
+  }
+
+  .comments {
+    border-top: 1px dotted $dark-grey;
+    padding-top: 15px;
   }
 }
 
@@ -106,4 +134,8 @@ article.post {
   #more {
     /*NOTE*/
   }
+}
+
+.posts-list {
+  display: inline-block;
 }
