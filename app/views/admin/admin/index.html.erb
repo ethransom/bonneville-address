@@ -1,0 +1,16 @@
+<div class="well">
+  <h1>The Wasatch Gecko | Admin</h1>
+
+  <p>
+    Welcome to the admin section of the site. Here you can modify 
+    <%= link_to "articles", admin_posts_path %>, 
+    <%= link_to "staff blurbs", admin_authors_path %>, and 
+    <%= link_to "sections" %>.
+  </p>
+</div>
+
+<ul>
+  <li><strong><%= link_to "Posts", admin_posts_path %></strong> &mdash; All articles published on the site.</li>
+  <li><strong><%= link_to "Sections" %></strong> &mdash; The main categories for articles.</li>
+  <li><strong><%= link_to "Staff", admin_authors_path %></strong> &mdash; Author names, blurbs, etc.</li>
+</ul>

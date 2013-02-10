@@ -1,6 +1,8 @@
 Blog::Application.routes.draw do
 
   namespace :admin do
+    root :to => "admin#index"
+    
     resources :posts
     resources :authors
   end
