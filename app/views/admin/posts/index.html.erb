@@ -5,6 +5,7 @@
     <th>Author</th>
     <th>Title</th>
     <th>Content</th>
+    <th>Publish Date</th>
     <th></th>
     <th></th>
     <th></th>
@@ -15,6 +16,7 @@
     <td><%= post.author.name %></td>
     <td><%= post.title %></td>
     <td><%= post.short_preview %></td>
+    <td><%= post.publish_date %></td>
     <td><%= link_to 'Show', admin_post_path(post), class: "btn" %></td>
     <td><%= link_to 'Edit', edit_admin_post_path(post), class: "btn btn-primary" %></td>
     <td><%= link_to 'Destroy', admin_post_path(post), confirm: 'Are you sure? There is no going back...', method: :delete, class: "btn btn-danger" %></td>
