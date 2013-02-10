@@ -16,7 +16,7 @@ $container-width: 900px;
 $content-width: 860px;
 
 /* Basic imports */
-@import "forms", "tooltips", "cute_box";
+@import "tooltips", "cute_box";
 
 /* module imports */
 @import "posts", "sections";

@@ -63,8 +63,8 @@ GEM
     less (2.0.12)
       commonjs (~> 0.2.0)
       therubyracer (~> 0.9.9)
-    less-rails (2.0.3)
-      actionpack (~> 3.1.1)
+    less-rails (2.1.8)
+      actionpack (>= 3.1)
       less (~> 2.0.7)
     libv8 (3.3.10.4)
     mail (2.3.3)
@@ -149,7 +149,7 @@ DEPENDENCIES
   friendly_id
   jquery-rails
   kaminari
-  less-rails (~> 2.0.0)
+  less-rails (~> 2.1.4)
   newrelic_rpm
   pg
   rails (= 3.1.10)
