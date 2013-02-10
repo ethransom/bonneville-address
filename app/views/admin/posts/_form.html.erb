@@ -1,15 +1,27 @@
-<%= purdy_form_for [:admin, @post] do |f| %>
-  <%= f.error %>
+<%= form_for [:admin, @post], class: "form-horizontal" do |f| %>
+  <% if @post.errors.any? %>
+  <div class="alert alert-error">
+    <p><strong><%= pluralize(@post.errors.count, "error") %> prohibited
+        this article from being saved:</strong></p>
 
-  <p>
-    <%= f.label "Author: " %>
-    <%= collection_select(:post, :author_id, @authors, :id, :name, {:prompt => false}) %>
-  </p>
+    <ul>
+    <% @post.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+  <% end %>
 
-  <%= f.text_field(:title, "Title") %>
-  <%= f.text_area(:content, "Content") %>
+    <%= f.label "Author " %>
+    <%= collection_select(:post, :author_id, @authors || [], :id, :name, {:prompt => false}, :class => "input-xxlarge") %>
 
-  <div class="actions">
-    <%= f.submit %>
+    <%= f.label "Title" %>
+    <div class="controls"><%= f.text_field(:title, class: "input-xxlarge") %></div>
+
+    <%= f.label "Content" %>
+    <%= f.text_area(:content, class: "input-xxlarge") %>
+
+  <div class="form-actions">
+    <%= f.submit class: "btn btn-primary" %>
   </div>
 <% end %>

@@ -1,4 +1,4 @@
-<% content_for(:title) { 'Staff' } %>
+<% content_for(:title) { 'Staff'} %>
 
 <% @authors.each do |author| %>
   <h2><%= link_to author.name, author_path(author) %> | <%= author.position %></h2>

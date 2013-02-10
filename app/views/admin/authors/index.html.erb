@@ -1,9 +1,9 @@
 <h1>Listing authors</h1>
 
-<table>
+<table class="table table-striped">
   <tr>
     <th>Name</th>
-    <th>Position</th>
+    <th>Position / Title</th>
     <th></th>
     <th></th>
     <th></th>
@@ -13,13 +13,13 @@
   <tr>
     <td><%= author.name %></td>
     <td><%= author.position %></td>
-    <td><%= link_to 'Show', admin_author_path(author) %></td>
-    <td><%= link_to 'Edit', edit_admin_author_path(author) %></td>
-    <td><%= link_to 'Destroy', admin_author_path(author), confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= link_to 'Show', admin_author_path(author), class: "btn" %></td>
+    <td><%= link_to 'Edit', edit_admin_author_path(author), class: "btn btn-primary" %></td>
+    <td><%= link_to 'Destroy', admin_author_path(author), confirm: 'Are you sure?', method: :delete, class: "btn btn-danger" %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Author', new_admin_author_path %>
+<%= link_to 'New Author', new_admin_author_path, class: "btn btn-primary" %>

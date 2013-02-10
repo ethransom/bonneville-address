@@ -59,6 +59,7 @@ class Admin::PostsController < Admin::AdminController
   # PUT /admin/posts/1.json
   def update
     @post = Post.find(params[:id])
+    @authors = Author.all
 
     respond_to do |format|
       if @post.update_attributes(params[:post])
