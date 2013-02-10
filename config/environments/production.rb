@@ -53,5 +53,7 @@ Blog::Application.configure do
   # Don't fallback to assets pipeling if a precompiled asset is missed
   config.assets.compile = true
 
+  config.assets.precompile += Dir["#{Rails.root}/app/assets/stylesheets/*.*"].collect {|s| File.basename(s).gsub(/.scss|.sass/, '') }
+
   # Generate digests for assets URLs
 end
