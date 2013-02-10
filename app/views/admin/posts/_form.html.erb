@@ -13,13 +13,16 @@
   <% end %>
 
     <%= f.label "Author " %>
-    <%= collection_select(:post, :author_id, @authors || [], :id, :name, {:prompt => false}, :class => "input-xxlarge") %>
+    <%= collection_select(:post, :author_id, @authors, :id, :name, {:prompt => false}, :class => "input-xxlarge") %>
 
     <%= f.label "Title" %>
     <div class="controls"><%= f.text_field(:title, class: "input-xxlarge") %></div>
 
     <%= f.label "Content" %>
     <%= f.text_area(:content, class: "input-xxlarge") %>
+
+    <%= f.label "Section" %>
+    <%= collection_select(:post, :section_id, @sections, :id, :name, {:prompt => false}, :class => "input-xxlarge") %>
 
   <div class="form-actions">
     <%= f.submit class: "btn btn-primary" %>

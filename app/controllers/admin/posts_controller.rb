@@ -26,6 +26,7 @@ class Admin::PostsController < Admin::AdminController
   def new
     @post = Post.new
     @authors = Author.all # for the option select
+    @sections = Section.all
 
     respond_to do |format|
       format.html # new.html.erb
@@ -37,6 +38,7 @@ class Admin::PostsController < Admin::AdminController
   def edit
     @post = Post.find(params[:id])
     @authors = Author.all # for the option select
+    @sections = Section.all
   end
 
   # POST /admin/posts
@@ -60,6 +62,7 @@ class Admin::PostsController < Admin::AdminController
   def update
     @post = Post.find(params[:id])
     @authors = Author.all
+    @sections = Section.all
 
     respond_to do |format|
       if @post.update_attributes(params[:post])
