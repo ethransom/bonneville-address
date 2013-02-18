@@ -12,7 +12,7 @@
   width: $width;
   margin-right: $margin;
   float: left;
-  font-family: serif;
+  font-family: "Quattrocento", serif;
 
   h3, h3 a {
     color: $dark-grey;
@@ -33,9 +33,10 @@
 }
 
 article.post {
+  font-family: "Quattrocento", serif; 
+
   h1 {
     color: $dark-grey;
-    font-family: 'Quattrocento', serif;
     font-size: 2.4em;
     border-bottom: 1px dotted $dark-grey;
     margin-bottom: 0;
