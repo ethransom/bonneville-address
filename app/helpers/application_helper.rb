@@ -22,7 +22,7 @@ module ApplicationHelper
 	end
 
 	def page_title
-		name = "The Wasatch Gecko"
+		name = "The Bonneville Address"
 		if content_for? :title
 			name << " | "
 			name << content_for(:title)
