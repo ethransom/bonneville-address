@@ -1,5 +1,8 @@
+<p><%= page_entries_info @posts %></p>
+
 <div class="posts-list">
   <%= render @posts %>
 </div>
 
 <%= paginate @posts, :window => 2 %>
+<p><%= page_entries_info @posts %></p>
