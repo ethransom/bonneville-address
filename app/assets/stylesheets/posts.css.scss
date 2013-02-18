@@ -7,7 +7,7 @@
   $margin: 5px;
 
   background-color: white;
-  padding: $padding;
+  padding: 0 $padding;
   $width: ($content-width / 3) - ($padding * 2) - ($margin * 2);
   width: $width;
   margin-right: $margin;
@@ -17,7 +17,7 @@
   h3, h3 a {
     color: $dark-grey;
     font-size: 125%;
-    margin-bottom: 0;
+    margin: 5px 0 0 0;
   }
 
   // author and publish date
