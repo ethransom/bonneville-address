@@ -40,6 +40,11 @@
 	<div id="post">
     <%= @post.content_html %>
 
+    <div class="more">
+      <p>More in <%= link_to @post.section.name, @post.section %></p>
+      <p>More from <%= link_to @post.author.name, @post.author %></p>
+    </div>
+
     <% # comments, provided through FB %>
     <div class="comments">
       <div class="fb-comments" data-href="<%= post_url @post %>" data-width="860" data-num-posts="20"></div>
