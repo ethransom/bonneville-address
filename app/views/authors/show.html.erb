@@ -2,10 +2,8 @@
   <%= @author.name %>, <%= @author.position %>
 <% end %>
 
-<h2><%= @author.name %> - <%= @author.position %></h2>
+<h1><%= @author.name %> - <%= @author.position %></h1>
 
 <p><%= @author.name %>'s articles:</p>
 
-<%= render :partial => "posts/post", :collection => @posts %>
-
-<%= paginate @posts, :window => 2 %>
+<%= render 'posts/paginated_list' %>

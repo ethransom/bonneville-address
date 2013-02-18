@@ -1,6 +1,1 @@
-<div class="posts-list"><%= render :partial => "post", :collection => @posts %></div> 
-
-<%= paginate @posts, :window => 2 %>
-
-<%= link_to 'New Post', new_post_path %>
-<hr />
+<%= render "paginated_list" %>
