@@ -198,21 +198,31 @@ div#content {
 
 .pagination {
 	text-align: center;
+
 	span {
-		background-color: $dark-grey;
-		@include box;
+		font-weight: bold;
+		color: white;
+		text-decoration: none;
+		font-family: 'Quattrocento', serif;
+		padding: 5px 10px;
+		font-variant: small-caps;
+		margin-right: 4px;
+		border: 1px solid $dark-grey;
 
 		a {
-			color: white;
 			text-decoration: none;
+			color: $dark-grey;
 		}
 	}
 
 	.current {
-		background-color: $dark-green;
+		background-color: $dark-grey;;
+		color: white;
+		border-color: $dark-grey;
 	}
 
-	margin-bottom: 20px;
+	border-top: 1px dotted $dark-grey;
+	padding-top: 20px;
 }
 
 blockquote {
