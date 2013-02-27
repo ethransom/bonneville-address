@@ -10,6 +10,15 @@
   <%= @author.position %>
 </p>
 
+<p>
+  <b>Blurb:</b>
+  <% if @author.blurb? %>
+    <%= @author.blurb_html %>
+  <% else %>
+    <em>N/A</em>
+  <% end %>
+</p>
+
 
 <%= link_to 'Edit', edit_admin_author_path(@author) %> |
 <%= link_to 'Back', admin_authors_path %>

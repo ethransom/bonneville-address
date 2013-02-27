@@ -4,6 +4,12 @@
 
 <h1><%= @author.name %> - <%= @author.position %></h1>
 
+<% if @author.blurb? %>
+  <blockquote>
+    <%= @author.blurb_html %>
+  </blockquote>
+<% end %>
+
 <p><%= @author.name %>'s articles:</p>
 
 <%= render 'posts/paginated_list' %>
