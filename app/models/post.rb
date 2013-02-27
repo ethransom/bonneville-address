@@ -20,8 +20,16 @@ class Post < ActiveRecord::Base
 		created_at.strftime("%A, %B #{created_at.day.ordinalize}")
 	end
 	
+	# TODO: Extract into separate renderer file
+	class HTMLWithPants < Redcarpet::Render::XHTML
+	  include Redcarpet::Render::SmartyPants
+	end
+
 	def content_html
-		markdown = Redcarpet::Markdown.new Redcarpet::Render::XHTML, :autolink => true, :no_intra_emphasis => true
+		markdown = Redcarpet::Markdown.new(HTMLWithPants, 
+			:autolink => true, 
+			:no_intra_emphasis => true
+		)
 		markdown.render(content).html_safe
 	end
 end
