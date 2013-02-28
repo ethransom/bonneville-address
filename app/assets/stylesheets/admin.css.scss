@@ -1,14 +1,9 @@
-article.post #admin-links {
-	list-style-type: none;
-}
+/*
+*= require bootstrap_and_overrides
+*= require_self
+*/
 
-article.post #admin-links li {
-	display: inline;
-}
 
-#edit-post, #delete-post {
-	:hover, :active {
-		color: #c30f0f;
-	}
-	color: #313131;
+body {
+  padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
 }
