@@ -18,8 +18,11 @@
     <%= f.label "Title" %>
     <div class="controls"><%= f.text_field(:title, class: "input-xxlarge") %></div>
 
+    <% # begin editor %>
+    <%= render "markdown_editor" %>
     <%= f.label "Content" %>
-    <%= f.text_area(:content, class: "input-xxlarge") %>
+    <%= f.text_area(:content, class: "input-xxlarge", id: "post-content") %>
+    <% # end editor %>
 
     <%= f.label "Section" %>
     <%= collection_select(:post, :section_id, @sections, :id, :name, {:prompt => false}, :class => "input-xxlarge") %>
